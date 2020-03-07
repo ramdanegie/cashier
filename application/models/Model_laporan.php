@@ -192,6 +192,7 @@ class Model_laporan extends CI_Model {
 
 
   function getangkatan(){
+    $this->db->select('angkatan');
     $this->db->group_by('angkatan');
     return $this->db->get('biaya');
   }
