@@ -1,0 +1,44 @@
+/* WIDGETS */
+.widget {
+  border-radius: 5px;
+  padding: 32px 30px;
+  margin-bottom: 10px;
+  
+}
+.widget.style1 h2 {
+  font-size: 30px;
+}
+.widget h2,
+.widget h3 {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+.widget-text-box {
+  padding: 20px;
+  border: 1px solid #e7eaec;
+  background: #ffffff;
+}
+.widget-head-color-box {
+  border-radius: 5px 5px 0 0;
+  margin-top: 10px;
+}
+.widget .flot-chart {
+  height: 100px;
+}
+
+.lazur-bg,
+.bg-info {
+  background-color: #2A3F54 !important;
+  color: #ffffff;
+}
+
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .text#{$infix}-left   { text-align: left !important; }
+    .text#{$infix}-right  { text-align: right !important; }
+    .text#{$infix}-center { text-align: center !important; }
+  }
+}
